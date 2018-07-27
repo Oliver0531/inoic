@@ -3,32 +3,7 @@ import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
-  template: `template:
-  <ion-header>
-  <ion-navbar>
-    <ion-title>
-      中文轉拼音
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content ng-controller="ExampleController"  padding>
-    
-
-  <ion-list padding >
-  <ion-item>
-    <ion-label stacked>Username</ion-label>
-    <ion-input type="text" ng-model="name" #newHero></ion-input>
-  </ion-item>
-</ion-list>
-<div padding>
-<button ion-button (click)="trans(newHero.value)">轉換</button>
-</div>
-
-<br>
-<ion-card-title padding>Result:<span>{{name}}</span></ion-card-title>
-
-</ion-content>`
+  templateUrl:'home.html'
 })
 export class HomePage {
 
