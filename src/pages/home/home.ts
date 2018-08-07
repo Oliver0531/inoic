@@ -15,7 +15,7 @@ export class HomePage {
     this.cleanHtml();
     if(FirstName){
       this.trans(FirstName," ");
-      document.getElementById('NationalFirstStyle').innerHTML += ',';
+      // document.getElementById('NationalFirstStyle').innerHTML += ',';
       document.getElementById('ChinesePinyin').innerHTML += ',';
       document.getElementById('GeneralPinyin').innerHTML += ',';
       document.getElementById('NationalSecondStyle').innerHTML += ',';
@@ -39,7 +39,7 @@ export class HomePage {
         }
         temp = temp.trim().toUpperCase();
         let result = find[Object.keys(find)[Object.keys(find).indexOf(temp)]];
-        let NationalFirstStyle = result[0];
+        // let NationalFirstStyle = result[0];
         let GeneralPinyin = result[1];
         let NationalSecondStyle = result[2];
         let WG = result[3];
@@ -54,7 +54,7 @@ export class HomePage {
         if(temp === "LYU"){
           temp = "LU";
         }
-        document.getElementById('NationalFirstStyle').innerHTML += '( ' + NationalFirstStyle + ' )';
+        // document.getElementById('NationalFirstStyle').innerHTML += '( ' + NationalFirstStyle + ' )';
         document.getElementById('ChinesePinyin').innerHTML += temp;
         document.getElementById('GeneralPinyin').innerHTML += GeneralPinyin;
         document.getElementById('NationalSecondStyle').innerHTML += NationalSecondStyle;
@@ -65,7 +65,7 @@ export class HomePage {
   }
 
   cleanHtml = () => {
-    document.getElementById('NationalFirstStyle').innerHTML = '';
+    // document.getElementById('NationalFirstStyle').innerHTML = '';
     document.getElementById('ChinesePinyin').innerHTML = '';
     document.getElementById('GeneralPinyin').innerHTML = '';
     document.getElementById('NationalSecondStyle').innerHTML = '';
