@@ -10,18 +10,62 @@
   <ion-content ng-controller="ExampleController"  padding>
       
   
-    <ion-list padding >
+    <ion-list padding>
     <ion-item>
-      <ion-label stacked>Username</ion-label>
-      <ion-input type="text" ng-model="name" #newHero></ion-input>
+      <ion-label stacked>姓氏</ion-label>
+      <ion-input type="text"  ng-model="firstname" #firstname></ion-input>
     </ion-item>
+    <ion-item>
+      <ion-label stacked>名字</ion-label>
+      <ion-input type="text"  ng-model="name" #name></ion-input>
+    </ion-item>
+
   </ion-list>
   <div padding>
-  <button ion-button (click)="trans(newHero.value)">轉換</button>
+  <button ion-button (click)="transOuput(firstname.value,name.value)">轉換</button>
   </div>
   
   <br>
-  <ion-card-title padding>Result:<span id="result">{{name}}</span></ion-card-title>
-  
+  <ion-grid>
+    <ion-row>
+      <ion-card-title padding>國音第一式
+        <div style="font-size:15px">
+          <div style="padding:10px 0 0 0" id="NationalFirstStyle"></div>
+        </div>
+      </ion-card-title>
+    </ion-row>    
+    <ion-row>
+      <ion-card-title padding>
+        漢語拼音
+        <div style="font-size:15px">
+          <div style="padding:10px 0 0 0" id="ChinesePinyin"></div>
+        </div>
+      </ion-card-title>
+    </ion-row>
+    <ion-row>
+      <ion-card-title padding>
+        通用拼音
+        <div style="font-size:15px">
+          <div style="padding:10px 0 0 0" id="GeneralPinyin"></div>
+        </div>
+      </ion-card-title>
+    </ion-row>
+    <ion-row>
+      <ion-card-title padding>
+        國音第二式
+        <div style="font-size:15px">
+          <div style="padding:10px 0 0 0" id="NationalSecondStyle"></div>
+        </div>
+      </ion-card-title>
+    </ion-row>
+    <ion-row>
+      <ion-card-title padding>
+        WG
+        <div style="font-size:15px">
+          <div style="padding:10px 0 0 0" id="WG"></div>
+        </div>
+      </ion-card-title>
+    </ion-row>    
+  </ion-grid>
   </ion-content>
 </ion-content>
